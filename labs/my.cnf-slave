@@ -1,8 +1,8 @@
 
 [mariadb]
 log-bin
-server_id=1
-log-basename=master1
+server_id=2
+log-basename=slave1
 
 [mysqld]
 datadir=/var/lib/mysql

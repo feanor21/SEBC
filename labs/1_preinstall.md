@@ -160,4 +160,38 @@ MariaDB [(none)]> show databases;
 
 MariaDB [(none)]>
 ```
+```
+sudo yum install -y wget curl net-utils htop 
+ cd /usr/bin && sudo wget https://downloads.mariadb.com/Connectors/java/connector-java-2.1.2/mariadb-java-client-2.1.2.jar
+```
 
+
+```
+install slave using same step and my.cnf-slave as template
+sudo /usr/bin/mysql_secire_installation
+```
+
+````
+
+MariaDB [(none)]> GRANT REPLICATION SLAVE ON *.* TO root;
+Query OK, 0 rows affected (0.00 sec)
+
+
+
+
+````
+
+
+````
+MariaDB [(none)]> show master status
+    -> ;
++--------------------+----------+--------------+------------------+
+| File               | Position | Binlog_Do_DB | Binlog_Ignore_DB |
++--------------------+----------+--------------+------------------+
+| master1-bin.000001 |      358 |              |                  |
++--------------------+----------+--------------+------------------+
+1 row in set (0.01 sec)
+
+````
+
+For me, host5 is my master, host4 is my secondary database.
