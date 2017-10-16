@@ -118,3 +118,46 @@ Hint: Some lines were ellipsized, use -l to show in full.
 [centos@ip-172-31-41-13 ansible]$ getent hosts 172.31.46.0
 172.31.46.0     ip-172-31-46-0.eu-west-1.compute.internal
 ````
+
+
+
+##Install mariadb database
+````
+sudo yum install mariadb-server -y 
+sudo service mariadb stop
+cat /etc/my.cnf
+
+````
+
+
+
+```
+$ mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 15
+Server version: 5.5.56-MariaDB MariaDB Server
+
+Copyright (c) 2000, 2017, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| amon               |
+| metastore          |
+| mysql              |
+| nav                |
+| navms              |
+| performance_schema |
+| rman               |
+| sentry             |
++--------------------+
+9 rows in set (0.00 sec)
+
+MariaDB [(none)]>
+```
+
