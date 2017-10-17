@@ -3,7 +3,7 @@
 
 MR=/opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce
 HADOOP=/opt/cloudera/parcels/CDH/bin
-HADOOP_USER_NAME=hdfs
+#HADOOP_USER_NAME=hdfs
 # Mark start of the loop
 echo Testing loop started on `date`
 
