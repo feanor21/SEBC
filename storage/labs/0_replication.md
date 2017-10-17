@@ -1,4 +1,4 @@
-hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar teragen 5242880 /tmp/input
+	
 HADOOP_USER_NAME=hdfs hadoop distcp  /user/feanor21 hdfs://54.93.198.167:8020/user/feanor21
 HADOOP_USER_NAME=hdfs hadoop distcp  /user/feanor21 hdfs://ec2-54-246-188-158.eu-west-1.compute.amazonaws.com:8020/
 
