@@ -1,0 +1,1 @@
+ time HADOOP_USER_NAME=feanor21 hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar teragen -Dddfs.blocksize=33600000 -Dmapred.map.tasks=4  102428800 /user/feanor21/huge

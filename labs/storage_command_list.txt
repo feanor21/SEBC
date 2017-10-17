@@ -1,3 +1,6 @@
 
+export HADOOP_USER_NAME=hdfs
+
+hdfs dfs -mkdir /user/Mladen-Trampic-SRB-1989
 
 hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar teragen 5242880 /tmp/input
