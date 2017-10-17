@@ -1,0 +1,3 @@
+
+
+hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar teragen 5242880 /tmp/input
