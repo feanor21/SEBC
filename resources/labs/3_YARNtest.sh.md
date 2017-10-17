@@ -8,7 +8,7 @@ HADOOP_USER_NAME=hdfs
 echo Testing loop started on `date`
 
 # Mapper containers
-for i in 8 4 2   
+for i in  4 2 8  
 do
 echo "mapper number : $i"
    # Reducer containers
@@ -16,7 +16,7 @@ echo "mapper number : $i"
    do      
 	echo "Reducer number : $j"
       # Container memory
-      for k in 512 1024 2048 
+      for k in 512 1024  2048
       do                         
          # Set mapper JVM heap 
          MAP_MB=`echo "($k*0.8)/1" | bc` 
@@ -30,7 +30,7 @@ echo "mapper number : $i"
                      -Dmapreduce.job.maps=$i \
                      -Dmapreduce.map.memory.mb=$k \
                      -Dmapreduce.map.java.opts.max.heap=$MAP_MB \
-                     51200000 /results/tg-10GB-${i}-${j}-${k} 1>tera_${i}_${j}_${k}.out 2>tera_${i}_${j}_${k}.err                       
+                     51200 /results/tg-10GB-${i}-${j}-${k} 1>tera_${i}_${j}_${k}.out 2>tera_${i}_${j}_${k}.err                       
 
        time HADOOP_USER_NAME=hdfs ${HADOOP}/hadoop jar $MR/hadoop-examples.jar terasort \
                      -Dmapreduce.job.maps=$i \
