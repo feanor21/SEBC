@@ -9,5 +9,5 @@ rm: The directory /precious cannot be deleted since /precious is snapshottable a
 HADOOP_USER_NAME=hdfs hdfs dfs -rm  -skipTrash /precious/SEBC-master.zip
 
 
-HADOOP_USER_NAME=hdfs   hdfs dfs -cp /precious/.snapshot/first-snapshot/important-file.txt /precious
+	
 HADOOP_USER_NAME=hdfs  hdfs dfs -cat /precious/important-file.txt
