@@ -1,0 +1,1 @@
+HADOOP_USER_NAME=hdfs hdfs dfs -put SEBC-master.zip /precious
