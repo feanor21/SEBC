@@ -8,7 +8,10 @@
 sysctl vm.swappiness
 vm.swappiness = 1
 ````
-
+````
+sudo echo never > /sys/kernel/mm/transparent_hugepage/defrag
+sudo echo never > /sys/kernel/mm/transparent_hugepage/enabled
+````
 ````
  cat /etc/fstab
 ````
@@ -163,7 +166,7 @@ MariaDB [(none)]>
 ```
 sudo yum install -y wget curl net-utils htop 
  cd /usr/bin && sudo wget https://downloads.mariadb.com/Connectors/java/connector-java-2.1.2/mariadb-java-client-2.1.2.jar
- sudo yum install mysql-connector-java
+ sudo yum	 install mysql-connector-java
  
  ```
 
