@@ -32,3 +32,7 @@ real    0m22.305s
 user    0m6.993s
 sys     0m0.248s
 
+
+I reduce the size of the generated file to run the tests faster. Cause of this, most of the time on the execution is for allowing containers. So, the fastest is the configuration with the less container.
+
+For a cluster with few ressources, it is complicated to allocate 8 mappers with 2GB Ram each. That is why this is the longer time.
