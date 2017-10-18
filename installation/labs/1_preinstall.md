@@ -5,7 +5,7 @@
 ## preinstall results
 
 ````
-sysctl vm.swappiness
+sysctl vm.swappiness=1
 vm.swappiness = 1
 ````
 ````
