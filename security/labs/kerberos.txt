@@ -26,4 +26,27 @@ http://blog.puneethabm.in/configure-hadoop-security-with-cloudera-manager-using-
  kinit cloudera-scm
  (pour avoir un ticket)
  
+ ### afficher les utilisateurs kerberos	
+ kadmin -p cloudera-scm
+ getprincs
  
+ ###
+ 
+  sudo -u hdfs kinit -kt /var/run/cloudera-scm-agent/process/667-hdfs-NAMENODE/hdfs.keytab hdfs/host2@FEANOR21
+  sudo -u hdfs hdfs dfs -chmod -R 771 /user/hive/warehouse
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
