@@ -173,7 +173,7 @@ sudo yum install -y wget curl net-utils htop
 
 ```
 install slave using same step and my.cnf-slave as template
-sudo /usr/bin/mysql_secire_installation
+sudo /usr/bin/mysql_secure_installation
 ```
 
 ````
