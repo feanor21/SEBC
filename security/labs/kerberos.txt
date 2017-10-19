@@ -36,6 +36,8 @@ http://blog.puneethabm.in/configure-hadoop-security-with-cloudera-manager-using-
   sudo -u hdfs hdfs dfs -chmod -R 771 /user/hive/warehouse
 
   
+  kinit -kt /var/run/cloudera-scm-agent/process/686-hive-HIVESERVER2/hive.keytab hive/host1@FEANOR21
+  
   
   
   
