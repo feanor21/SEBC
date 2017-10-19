@@ -1,0 +1,29 @@
+# Kerberos
+
+yum install openldap-clients krb5-workstation  krb5-libs -y
+
+
+#clients
+yum -y install krb5-workstation krb5-libs krb5-auth-dialog
+#kerberos server
+yum -y install krb5-server krb5-libs krb5-auth-dialog krb5-workstation -y openldap-clients
+
+
+/usr/sbin/kdb5_util create -s
+
+
+kadmin.local
+kadmin.local:  addprinc cloudera-scm@feanor21
+WARNING: no policy specified for cloudera-scm@feanor21; defaulting to no policy
+Enter password for principal "cloudera-scm@feanor21":
+Re-enter password for principal "cloudera-scm@feanor21":
+Principal "cloudera-scm@feanor21" created.
+
+
+http://blog.puneethabm.in/configure-hadoop-security-with-cloudera-manager-using-kerberos/
+
+
+ kinit cloudera-scm
+ (pour avoir un ticket)
+ 
+ 
