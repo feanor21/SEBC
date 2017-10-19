@@ -111,3 +111,6 @@ INFO  : OK
 1 row selected (0.3 seconds)
 0: jdbc:hive2://localhost:10000/default>
 ```
+
+
+
