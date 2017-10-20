@@ -5,7 +5,7 @@ do
 	echo "$name""_password"
 done
  mysql -u root -ptoto -c  "create database $name DEFAULT CHARACTER SET utf8;"
-mysql -u root -ptoto -c  "create database $name DEFAULT CHARACTER SET utf8;"
+mysql -u root -ptoto -c  "grant all on $name.* TO '$name'@'%' IDENTIFIED BY '${name}_password';"
 	echo $i+_password
 	
 	
