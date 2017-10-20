@@ -1,4 +1,33 @@
-sentry is not working, i am running out of time to fiw it
+sentry is working, i am running out of time to test it.
+I had show roles command to show that tight are working
+
+```
+beeline> [root@ip-172-31-18-140 centos]# kdestroy
+[root@ip-172-31-18-140 centos]# kinit siwicki
+Password for siwicki@FEANOR21.CO.UK:
+[root@ip-172-31-18-140 centos]# beeline
+Beeline version 1.1.0-cdh5.9.3 by Apache Hive
+beeline> !connect jdbc:hive2://ip-172-31-18-140.eu-west-1.compute.internal:10000/default;principal=hive/ip-172-31-18-140.eu-west-1.compute.internal@FEANOR21.CO.UK
+scan complete in 2ms
+Connecting to jdbc:hive2://ip-172-31-18-140.eu-west-1.compute.internal:10000/default;principal=hive/ip-172-31-18-140.eu-west-1.compute.internal@FEANOR21.CO.UK
+Connected to: Apache Hive (version 1.1.0-cdh5.9.3)
+Driver: Hive JDBC (version 1.1.0-cdh5.9.3)
+Transaction isolation: TRANSACTION_REPEATABLE_READ
+0: jdbc:hive2://ip-172-31-18-140.eu-west-1.co> show roles;
+INFO  : Compiling command(queryId=hive_20171020103636_9e2ca17c-d9b8-4796-a88c-cdc9e9c3c436): show roles
+INFO  : Semantic Analysis Completed
+INFO  : Returning Hive schema: Schema(fieldSchemas:[FieldSchema(name:role, type:string, comment:from deserializer)], properties:null)
+INFO  : Completed compiling command(queryId=hive_20171020103636_9e2ca17c-d9b8-4796-a88c-cdc9e9c3c436); Time taken: 0.06 seconds
+INFO  : Executing command(queryId=hive_20171020103636_9e2ca17c-d9b8-4796-a88c-cdc9e9c3c436): show roles
+INFO  : Starting task [Stage-0:DDL] in serial mode
+ERROR : Error processing Sentry command: Access denied to siwicki.Please grant admin privilege to siwicki.
+ERROR : FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.SentryGrantRevokeTask. SentryAccessDeniedException: Access denied to siwicki
+INFO  : Completed executing command(queryId=hive_20171020103636_9e2ca17c-d9b8-4796-a88c-cdc9e9c3c436); Time taken: 0.023 seconds
+Error: Error while processing statement: FAILED: Execution Error, return code 1 from org.apache.hadoop.hive.ql.exec.SentryGrantRevokeTask. SentryAccessDeniedException: Access denied to siwicki (state=08S01,code=1)
+0: jdbc:hive2://ip-172-31-18-140.eu-west-1.co>
+```
+
+
 ```
 
 0: jdbc:hive2://ip-172-31-18-140.eu-west-1.co> [root@ip-172-31-18-140 centos]# kdestroy
