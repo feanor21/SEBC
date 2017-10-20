@@ -6,7 +6,7 @@ sentry is not working, i am running out of time to fiw it
 Password for ernest@FEANOR21.CO.UK:
 [root@ip-172-31-18-140 centos]# beeline
 Beeline version 1.1.0-cdh5.9.3 by Apache Hive
-beeline> !connect jdbc:hive2://ip-172-31-18-140.eu-west-1.compute.internal:10000/default;principal=hive/ip-172-31-18-140.eu-west-1.compute.internal@FEANOR21.CO.UK
+beeline> !connect jdbc:hive2://ip-172-31-18-140.eu-west-1.compute.internal:10000/default;principal=hive/server1@FEANOR21.CO.UK
 scan complete in 2ms
 Connecting to jdbc:hive2://ip-172-31-18-140.eu-west-1.compute.internal:10000/default;principal=hive/ip-172-31-18-140.eu-west-1.compute.internal@FEANOR21.CO.UK
 Connected to: Apache Hive (version 1.1.0-cdh5.9.3)
