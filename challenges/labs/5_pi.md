@@ -1,3 +1,4 @@
+```
 [root@ip-172-31-18-140 centos]# sudo -u siwicki  hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar pi 10 100
 Number of Maps  = 10
 Samples per Map = 100
@@ -89,3 +90,4 @@ Starting Job
                 Bytes Written=97
 Job Finished in 28.615 seconds
 Estimated value of Pi is 3.14800000000000000000
+```
