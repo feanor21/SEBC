@@ -1,3 +1,4 @@
+```
 [root@ip-172-31-18-140 centos]# sudo -u ernest hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar terasort /user/ernest/tgen512m /user/ernest/tgen512m_sorted
 17/10/20 09:48:35 INFO terasort.TeraSort: starting
 17/10/20 09:48:37 INFO hdfs.DFSClient: Created token for ernest: HDFS_DELEGATION_TOKEN owner=ernest@FEANOR21.CO.UK, renewer=yarn, realUser=, issueDate=1508492917376, maxDate=1509097717376, sequenceNumber=2, masterKeyId=2 on 172.31.18.140:8020
@@ -118,3 +119,4 @@ Spent 1065ms computing partitions.
         File Output Format Counters
                 Bytes Written=5120000000
 17/10/20 09:50:22 INFO terasort.TeraSort: done
+```
