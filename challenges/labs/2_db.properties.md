@@ -4,3 +4,4 @@ INFO main:com.cloudera.server.cmf.Main: Starting SCM Server. JVM Args: [-Dlog4j.
 ```
 2017-10-20 08:33:42,618 INFO WebServerImpl:com.cloudera.server.cmf.WebServerImpl: Started Jetty server.
 ```
+@mfernest: I don't love that you omitted the timestamp on your first log line. Missing the Markdown is one thing, omitting bits of data is another.
