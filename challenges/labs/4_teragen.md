@@ -1,15 +1,14 @@
 ```
 time HADOOP_USER_NAME=ernest hadoop jar /opt/cloudera/parcels/CDH/jars/hadoop-examples.jar teragen -Dddfs.blocksize=33554432 -Dmapred.map.tasks=6  51200000 /user/ernest/tgen512m
  ```
- 
+ @mfernest: Using `HADOOP_USER_NAME` would of course fail in a Kerberized environment.
+ @mfernest: Typo in `-Dddfs.blocksize=33554432` -- you ended up with 128 MB blocks.
  ```
  real    1m15.231s
 user    0m6.026s
 sys     0m0.232s
 
  ```
- 
- 
  
  ```
  [root@ip-172-31-18-140 centos]# time HADOOP_USER_NAME=ernest hdfs dfs -ls /user/ernest/tgen512m
@@ -24,7 +23,6 @@ Found 7 items
 
  ```
  
- 
  ```
  root@ip-172-31-18-140 centos]# time HADOOP_USER_NAME=ernest hadoop fsck /user/ernest/tgen512m
 DEPRECATED: Use of this script to execute hdfs command is deprecated.
@@ -38,6 +36,9 @@ FSCK started by ernest (auth:SIMPLE) from /172.31.18.140 for path /user/ernest/t
  Total files:   7
  Total symlinks:                0
  Total blocks (validated):      42 (avg. block size 121904761 B)
+ ```
+@mfernest: Note your avg. block size is close to the default (128 MB).
+ ```
  Minimally replicated blocks:   42 (100.0 %)
  Over-replicated blocks:        0 (0.0 %)
  Under-replicated blocks:       0 (0.0 %)
