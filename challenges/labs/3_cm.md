@@ -77,3 +77,4 @@ drwxrwxr-x   - oozie  oozie               0 2017-10-20 08:58 /user/oozie
 drwxr-xr-x   - hdfs   supergroup          0 2017-10-20 09:04 /user/siwicki
 [root@ip-172-31-18-140 centos]#
 ```
+@mfernest: Test user accounts should have appropriate user:group permissions assigned.
